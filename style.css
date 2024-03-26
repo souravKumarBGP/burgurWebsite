@@ -1,0 +1,736 @@
+/* ******************************************** Import Common.css file here *****************************************/
+@import url("./common.css");
+
+/* **************************************************************************************************************
+Start header section styling 
+***************************************************************************************************************** */
+header{
+  width: 100%;
+  font-size: 1.6rem;
+
+  /* ************ navTop section styling *********** */
+  .navTop{
+    background: linear-gradient(135deg, var(--bgActionColor) 32%, var(--bgBluePrimaryColor) 32%);
+
+    .row > div:last-child{text-align: end;}
+    
+    & a{
+      padding: 8px 0;
+      &:hover b{
+        padding-left: 5px;
+      }
+      &:hover i{
+        transform: rotate(360deg);
+        scale: 1.2;
+      }
+    }
+  }/***** End navTop Styling *****/
+
+  /* ************ navBottom section styling ******** */
+  .navBottom{
+    padding: 15px 0;
+    width: 100%;
+    background: var(--bgBluePrimaryColor);
+    z-index: 9999;
+    
+    .logo{
+      font-size: 1.5rem;
+    }
+
+    .deskTopManue{
+
+      li a{
+        padding: 5px 15px;
+        margin-right: 25px;
+        position: relative;
+
+        &:hover::first-letter{
+          color: var(--bgActionColor) !important;
+        }
+
+        &::first-letter{
+          font-weight: bold;
+        }
+
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: var(--bgActionColor);
+          width: 0;
+          transition: all 0.3s;
+          
+        }
+
+        &:hover::before{
+          width: 100%;
+        }
+      }
+
+    }
+
+    .mobileManue{
+      width: 0%;
+      overflow: hidden;
+      min-height: 80vh;
+      background: #010a5eac;
+      position: fixed;
+      top: 58px;
+      left: -2px;
+      z-index: 9999;
+      backdrop-filter: blue(50px);
+      box-shadow: 5px 5px 5px #ffffff20;
+      border-right: 1.5px solid gold;
+      border-bottom: 1.5px solid gold;
+      border-bottom-right-radius: 10px;
+      backdrop-filter: blur(10px);
+      padding: 0;
+       
+      & img{
+        border: 1px solid var(--textLightColor);
+        width: 65px;
+        height: 65px;
+        padding: 3px;
+        border-radius: 100%;
+        object-fit: cover;
+
+      }
+
+      .button button{
+        color: var(--bgActionColor);
+        padding: 5px;
+      }
+
+      .manue a{
+        padding: 5px;
+        margin: 20px 0;
+        display: block;
+      }
+    }
+    
+  }
+
+}/****** End of header styling *****/
+
+/* **************************************************************************************************************
+Start main section styling 
+***************************************************************************************************************** */
+main{
+  width: 100%;
+
+  /* ********* Start owlCrausel-binner section styling *********** */
+  .owlCraulel-binner{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+
+    .item{
+      height: 200px;
+      background-color: red;
+      margin-right: -10px !important;
+
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+    }
+    
+    .owl-nav{
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 !important;
+
+
+      & button span{
+        background: var(--bgActionColor);
+        padding: 20px 12px;
+        font-size: 2.5rem;
+      }
+    }
+    
+  }/***** End of owlCrausel *****/
+
+  /* *********** Start heroBinner section styling *************** */
+  .heroBinner{
+    width: 100%;
+    height: 55vh;
+    animation: changeHeroBgImage 20s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 84%, 0 100%);
+    letter-spacing: 1px;
+    text-align: center;
+    & h2{
+      color: var(--bgActionColor);
+      font-size: 3rem;    
+    }
+
+  }/***** End of heroBinner *****/
+
+  /* **************** Start OurManue section styling *************** */
+  .manueList{
+    width: 100%;
+
+    .item{
+      padding: 10px;
+
+      .box{
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        box-shadow: 0px 0px 5px #ffffff53 inset;
+        border-radius: 3px;
+        padding: 5px;
+      }
+
+      .offerBox, .price{
+        padding: 15px;
+        background: var(--bgActionColor);
+        width: 60px;
+        transform: rotate(-40deg);
+        position: absolute;
+        top: -10px;
+        left: -5px;
+        font-weight: bold;
+        font-size: 1.6rem;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #9fa5e095 ;
+      }
+
+      .price{
+        transform: rotateX(0deg);
+        min-width: 90px;
+        padding: 10px;
+        top: -1%;
+        left: 56% !important;
+        border-radius: 5px 0 0px 5px;
+        text-align: center;
+
+      }
+
+      & img{
+        width: 100%;
+        object-fit: contain;
+        margin: auto;
+      }
+
+      .actionBtn{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+    
+  }
+
+  /* **************** Start services section styling *************** */  
+  .services{
+    width: 100%;
+    margin-top: 70px;
+
+    .container{
+      position: relative;
+    }
+    .filterBox{
+      width: 25%;
+      min-height: 73vh;
+      background: #010a5ed5;
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: -82px;
+      border-right: 1px solid var(--bgActionColor);
+      border-radius: 0px 20px 0px 0px;
+      left: 0;
+      z-index: 999;
+      padding: 25px 15px;
+      display: none;
+
+      .filterForm label{
+        cursor: pointer;
+        
+        & input{
+          position: relative;
+          cursor: pointer;
+          appearance: none;
+          border: 1px solid var(--bgActionColor);
+          width: 13px;
+          height: 13px;
+          margin: 3px 0;
+          border-radius: 2px;
+          outline: none;
+
+          &:checked::after{
+            content: "✓";
+            display: block;
+            font-weight: bolder;
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 17px;
+            height: 17px;
+            text-align: center;
+            font-size: 1.2;
+            border-radius: 2px;
+            background-color: var(--bgActionColor);
+            color: var(--bgBluePrimaryColor);
+          }
+
+          
+        }
+      }
+      
+      .filterForm label:has(input:checked){
+        color: var(--bgActionColor);
+      }
+      
+    }
+    
+    .item{
+      .box{
+        width: 100%;
+        min-height: 350px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding: 10px;
+        border-radius: 0px 50px 5px 0px;
+        box-shadow: 0px 0px 15px #ffffff44 inset;
+        border: 1px solid var(--bgActionColor);
+
+        .offerBox{
+          padding: 15px;
+          background: var(--bgActionColor);
+          width: 60px;
+          transform: rotate(-40deg);
+          position: absolute;
+          top: -10px;
+          left: -5px;
+          font-weight: bold;
+          font-size: 1.6rem;
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px #9fa5e095 ;
+          text-align: center;
+
+        }
+
+        & img{
+          width: 90%;
+          aspect-ratio: 1/1;
+          /* border: 1px solid green; */
+          object-fit: contain;
+          
+        }
+
+        .price{
+          font-size: 1.8rem;
+          min-height: 20px;
+
+          .incAndDecItem button{
+            background: var(--bgActionColor);
+            border-radius: 5px;
+            padding: 8px 10px;
+            font-size: 1.5rem;
+          }
+        }
+
+        .actionBtn{
+          width: 100%;
+          border-radius: 0;
+          margin-top: 15px;
+        }
+        
+      }
+      
+    }
+    
+  }
+
+  /* **************** Start ourTeamMember section Styling ********** */
+  .ourTeamMember{
+    width: 100%;
+
+    .conteint{
+      width: 100%;
+      min-height: 300px;
+      background: linear-gradient(#000106b8, #000106b8), url("./img/burger-5.webp");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      
+      .item{
+        height: 300px;
+        text-align: center;
+        padding: 35px;
+        letter-spacing: 1px;
+        line-height: 26px;
+
+        .box{
+          width: 50%;
+          height: 100%;
+          margin: auto;
+
+          & img{
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            margin: 8px auto;
+            border: 1px solid var(--bgActionColor);
+            padding: 3px;
+            object-fit: cover;
+          }
+        }
+      }
+      .owl-nav{
+        display: none;
+      }
+    }
+  }
+
+  /* ***************** Start Shop Gallary section Styling ********** */
+  .shopGallary{
+    width: 100%;
+
+    .item{
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      overflow: hidden;
+
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .box{
+        width: 100%;
+        height: 100%;
+        background: #000106b8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        scale: 0;
+      }
+
+      &:hover{
+        scale: 1.03;
+        .box{
+          scale: 1;
+        }
+      }
+    }
+  }
+  
+  /* ***************** Start ourClintReview section styling ********* */
+  .ourClintReview{
+    width: 100%;
+
+    .conteint{
+      width: 100%;
+      min-height: 300px;
+      
+      .item{
+        height: 320px;
+
+        .box{
+          width: 95%;
+          height: 100%;
+          margin: auto;
+          border-left: 1px solid var(--bgActionColor);
+          border-bottom: 1px solid var(--bgActionColor);
+          box-shadow: 0px 0px 15px #ebebed38 inset;
+          position: relative;
+          border-radius: 5px 70px 5px 0px;
+          padding: 15px;
+
+          & img{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            margin: auto;
+          }
+
+        }
+      }
+      .owl-nav{
+        display: none;
+      }
+    }
+  }
+}/***** End of main styling *****/
+
+@keyframes changeHeroBgImage{
+  0%{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/burger-3.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  25%{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/burger-4.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  50%{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/burger-5.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  75%{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/burger-6.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  100%{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/burger-1.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+/* **************************************************************************************************************
+Start footer section styling 
+***************************************************************************************************************** */
+footer{
+  width: 100%;
+  background: var(--bgBlackPrimaryColor);
+
+  .footerTop{
+    width: 100%;
+    min-height: 400px;
+
+    & ul li:hover i{
+      padding-right: 5px;
+      color: var(--bgActionColor);
+    }
+
+    & img{
+      width: 90%;
+      height: 90%;
+      margin: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }/***** ENd of footerTop *****/
+
+  .footerBottom{
+    background: black;
+  }
+}/****** End of footer *****/
+
+
+/* **************************************************************************************************************
+Media Querry css styling
+***************************************************************************************************************** */
+@media all and (max-width:1191px){
+  .container{
+    max-width: 996px;
+    padding: 0 30px;
+  }
+  .row{
+    margin: 0px !important;
+  }
+  header{
+    .navTop{
+      background: linear-gradient(135deg, rgba(243,154,12,1) , rgba(1,10,94,1) 70%);
+    }
+
+    .navBottom{
+      .logo{
+        font-size: 1.3rem;
+      }
+      
+      & li a{
+        margin-right: 10px !important;
+      }
+
+      .actionBtn a{
+        padding: 10px !important;
+      }
+    }
+
+
+  }
+  
+}
+
+@media all and (max-width:992px){
+  
+  .heroBinner{
+    height: 80vh !important;
+  }
+
+  .actionBtn a{
+    font-size: 2rem !important;
+  }
+
+  .owl-nav span{
+    font-size: 4rem !important;
+  }
+
+  main{
+
+    .manueList .item{
+      .box{
+        height: 400px;
+        padding: 5px;
+      
+        .price{
+          font-size: 1.9rem;
+          min-width: 150px;
+          padding: 15px;
+        }
+      }
+    }
+
+    .services{
+      .filterBox{
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media all and (max-width:767px){
+  .container{
+    max-width: 100%;
+    padding: 0 15px ;
+  }
+  
+  header{
+    .navTop{
+
+      .row > div{
+        text-align: center !important;
+      }
+  
+      a{
+        font-size: 1.3rem;
+        padding-bottom: 0px !important;
+      }
+  
+    }
+
+    .navBottom{
+      .addToCartBtn, .likeBtn{
+        font-size: 2rem;
+        border: none;
+        outline: none;
+        margin-right: 20px;
+      }
+      .bars{
+        background: transparent;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 2rem;
+        display: block;
+        border: 1px solid #fff;
+        border-radius: 3px;
+      }
+    }
+    
+  }
+  
+  main{
+    .heroBinner{
+      & h2{
+        font-size: 2.5rem;
+      }
+      & h3{
+        font-size: 1.5rem;
+      }
+    }
+
+    .manueList .item .price{
+      left: 61% !important;
+    }
+
+    .services{
+      .filterBox{
+        width: 40%;
+      }
+    }
+
+    .ourTeamMember .item{
+      padding: 20px 0px !important;
+      .box{
+        width: 100% !important;
+      }
+    }
+
+  }
+ 
+}
+
+@media all and (max-width:576px){
+  main{
+    .services{
+      .filterBox{
+        width: 65%;
+      }
+    }
+  }
+}
+
+@media all and (max-width:322px){
+  header .navBottom{
+
+    .logo{
+      font-size: 1.1rem;
+    }
+
+    button{
+      font-size: 1.5rem !important;
+      padding-bottom: 3px !important;
+    }
+
+    .mobileManue{
+      
+      & a{
+        margin: 5px !important;
+      }
+    }
+  }
+  
+  main{
+    .services{
+      .filterBox{
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media all and (min-width:1192px){
+  .row{
+    margin: 0px !important;
+  }
+  
+  .container{
+    max-width: 1600px;
+    padding: 0 20px;
+  }
+}
+
+
